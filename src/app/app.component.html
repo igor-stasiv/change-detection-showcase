@@ -1,1 +1,18 @@
 <h1>Change Detection Showcase</h1>
+
+<h2>Parent Component (Default strategy)</h2>
+<button (click)="updatePrimitiveData()">Update Primitive Data</button>
+<button (click)="updateNonPrimitiveDataReference()">Update Non-Primitive Data Reference</button>
+<button (click)="updateNonPrimitiveDataValue()">Update Non-Primitive Data Value</button>
+<button (click)="updateAsyncData()">Update Async Data</button>
+<p>Primitive Data: {{ primitiveData }}</p>
+<p>Non-Primitive Data: {{ nonPrimitiveData.value }}</p>
+<p>Async Data: {{ asyncData$ | async }}</p>
+
+<button (click)="updateServiceValue()">Update Service Value</button>
+<p>Shared Service Value: {{ sharedService.sharedValue }}</p>
+
+<app-child
+  [parentPrimitiveData]="primitiveData"
+  [parentNonPrimitiveData]="nonPrimitiveData"
+  [parentAsyncData]="asyncData$ | async" />

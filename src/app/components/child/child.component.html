@@ -1,0 +1,12 @@
+<h2>Child Component (OnPush strategy)</h2>
+<button (click)="forceCheck()">Force Check</button>
+<p>Parent Primitive Data: {{ parentPrimitiveData() }}</p>
+<p>Parent Non-Primitive Data: {{ parentNonPrimitiveData().value }}</p>
+<p>Parent Async Data: {{ parentAsyncData() }}</p>
+<button (click)="updatePrimitiveData()">Update Primitive Data</button>
+<button (click)="updateNonPrimitiveData()">Update Non-Primitive Data</button>
+<p>Primitive Data: {{ primitiveData }}</p>
+<p>Non-Primitive Data: {{ nonPrimitiveData.value }}</p>
+
+<button (click)="updateServiceValue()">Update Service Value</button>
+<p>Shared Service Value: {{ sharedService.sharedValue }}</p>
