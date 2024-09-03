@@ -1,1 +1,1 @@
-# change-detection-showcase
+# Change Detection Showcase
